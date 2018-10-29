@@ -75,10 +75,13 @@ window.onload = function(){
     
     var oIndustry = document.getElementsByClassName('industry');
     var oShop1 = document.getElementsByClassName('shop1');
+    oShop1[0].style.display = 'block';
     oIndustry[0].onmouseover = function(){
+        
         this.className = 'active';
         oShop1[0].style.display = 'block';
         oShop1[0].src = 'image/service.png';
+        
     }
     oIndustry[1].onmouseover = function(){
         this.className = 'active';
@@ -98,11 +101,14 @@ window.onload = function(){
         
     for(var i=0;i<oIndustry.length;i++){
         oIndustry[i].onmouseout = function(){
+            
             this.className = '';
             for(var k=0;k<oShop1.length;k++){
+                
                 oShop1[k].style.display = 'none';
             }
         }
+        
     }
     
     
